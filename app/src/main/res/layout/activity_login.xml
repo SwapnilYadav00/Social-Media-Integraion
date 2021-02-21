@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#212134"
+    tools:context=".LoginActivity">
+
+
+        <RelativeLayout
+            android:layout_margin="10sp"
+            android:background="@drawable/round_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_below="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:hint="E-mail"
+                tools:ignore="Autofill,HardcodedText"
+                android:inputType="textEmailAddress" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TextInputLayout_password"
+                android:layout_below="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                app:passwordToggleEnabled="true"
+                tools:ignore="HardcodedText">
+                <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="15sp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    app:errorEnabled="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_below="@+id/TextInputLayout_password"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@drawable/round_bg"
+                android:backgroundTint="@color/colorPrimary"
+                android:textSize="18sp"
+                android:onClick="Login"
+                tools:ignore="HardcodedText"/>
+            <TextView
+                android:id="@+id/for_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_btn"
+                android:text="Forget Password ?"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/ortext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/for_pass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="OR CONTINUE WITH"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+
+
+            <ImageButton
+                android:id="@+id/signgoogle"
+                android:layout_width="100sp"
+                android:layout_height="45sp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:padding="5sp"
+                android:background="@drawable/round_bg"
+                android:layout_below="@id/ortext"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10sp"
+                android:src="@drawable/ic_google"
+                android:layout_marginBottom="15sp"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/sign_fb"
+                android:layout_width="100sp"
+                android:layout_height="45sp"
+                android:layout_below="@id/ortext"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="15sp"
+                android:background="@drawable/round_bg"
+                android:src="@drawable/ic_github"
+                android:scaleType="fitCenter"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+    <include layout="@layout/include_progress_overlay"/>
+
+    <TextView
+        android:id="@+id/registor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="Not have account yet ? Sign Up Now"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:onClick="Registor"
+        tools:ignore="HardcodedText" />
+</RelativeLayout>
